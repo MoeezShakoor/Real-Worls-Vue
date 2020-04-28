@@ -1,10 +1,10 @@
-/* eslint-disable vue/require-v-for-key */
 <template>
   <div>
     <p class="cart">Cart {{ cartValue }}</p>
     <div class="gridbox">
       <div>
-        <img :src="variants[selectedIndex].variantImage" class="sockImage" />
+        <!-- <img :src="variants[selectedIndex].variantImage" class="sockImage" /> -->
+        <img :src="image" class="sockImage" />
       </div>
       <div class="grid-2">
         <h2>{{ itemName }}</h2>
@@ -28,19 +28,6 @@
       </div>
     </div>
     <hr />
-
-    <!-- <div class="reviewbox">
-      <h2>Reviews</h2>
-      <br /><br />
-      <p v-if="!reviews.length">there are no reviews</p>
-      <ul>
-        <li v-for="review in reviews">
-          <p>{{ review.name }}</p>
-          <p>{{ review.review }}</p>
-        </li>
-      </ul>
-    </div> -->
-    <hr />
   </div>
 </template>
 
@@ -51,7 +38,7 @@ export default {
       Name: "Socks",
       cartValue: 0,
       brand: "branded",
-      // image:'./assets/Images/greenSocks.jpg',
+      //image: "../assets/Images/greenSocks.png",
       selectedIndex: 0,
       reviews: [],
       cart: 0,
@@ -78,7 +65,7 @@ export default {
       this.selectedIndex = index;
     },
     incrementCart() {
-      this.cartValue +=1;
+      this.cartValue += 1;
     },
     decrementCart() {
       if (this.cartValue > 0) {
