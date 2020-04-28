@@ -1,10 +1,10 @@
 /* eslint-disable vue/require-v-for-key */
 <template>
   <div>
-    <p class="cart">Cart {{ Cart.cartValue }}</p>
+    <p class="cart">Cart {{ cartValue }}</p>
     <div class="gridbox">
       <div>
-        <img :src="image" class="sockImage" />
+        <img :src="variants[selectedIndex].variantImage" class="sockImage" />
       </div>
       <div class="grid-2">
         <h2>{{ itemName }}</h2>
@@ -23,8 +23,8 @@
           v-on:mouseover="updatecolor(index)"
         ></div>
 
-        <button v-on:click="incrementCart">Add to cart</button>
-        <button class="delbutton" v-on:click="decrementCart">Delete</button>
+        <button v-on:click="incrementCart()">Add to cart</button>
+        <button class="delbutton" v-on:click="decrementCart()">Delete</button>
       </div>
     </div>
     <hr />
@@ -45,11 +45,11 @@
 </template>
 
 <script>
-import Cart from "@/store/Cart.js";
 export default {
   data() {
     return {
       Name: "Socks",
+      cartValue: 0,
       brand: "branded",
       // image:'./assets/Images/greenSocks.jpg',
       selectedIndex: 0,
@@ -69,8 +69,7 @@ export default {
           inventory: 0,
           variantImage: "../assets/blackSocks.jpg"
         }
-      ],
-      Cart: Cart.data
+      ]
     };
   },
 
@@ -79,10 +78,10 @@ export default {
       this.selectedIndex = index;
     },
     incrementCart() {
-      Cart.methods.addtocart();
+      this.cartValue +=1;
     },
     decrementCart() {
-      Cart.methods.delFromCart();
+      this.cartValue -=1;
     }
     // addReview(productreview) {
     //   this.reviews.push(productreview);
