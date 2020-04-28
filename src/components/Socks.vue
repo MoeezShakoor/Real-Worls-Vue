@@ -61,13 +61,13 @@ export default {
           variantID: 1,
           variantColor: "green",
           inventory: 10,
-          variantImage: "../assets/greenSocks.jpg"
+          variantImage: "../assets/greenSocks.png"
         },
         {
           variantID: 2,
           variantColor: "black",
           inventory: 0,
-          variantImage: "../assets/blackSocks.jpg"
+          variantImage: "../assets/blackSocks.png"
         }
       ]
     };
@@ -81,7 +81,9 @@ export default {
       this.cartValue +=1;
     },
     decrementCart() {
-      this.cartValue -=1;
+      if (this.cartValue > 0) {
+        this.cartValue -= 1;
+      }
     }
     // addReview(productreview) {
     //   this.reviews.push(productreview);
