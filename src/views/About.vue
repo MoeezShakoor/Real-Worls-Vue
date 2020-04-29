@@ -7,5 +7,19 @@
       tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.
       Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
     </p>
+    <hr/>
+    <Contact/>
   </div>
 </template>
+<script>
+// @ is an alias to /src
+//import HelloWorld from "@/components/HelloWorld.vue";
+import Contact from "@/components/contact.vue";
+export default {
+  name: "About",
+  components: {
+    // HelloWorld
+    Contact
+  }
+};
+</script>
