@@ -34,8 +34,8 @@ export default {
 				Issue: this.Issue
 			}
 			this.Issues.push(productreview);
-			// this.name=null
-			// this.review=null
+			this.name=null
+			this.review=null
 		}
   }
 };

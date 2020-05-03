@@ -8,12 +8,10 @@
 
 <script>
 // @ is an alias to /src
-//import HelloWorld from "@/components/HelloWorld.vue";
 import Modal from "@/components/modal.vue";
 export default {
   name: "ModalPage",
   components: {
-    // HelloWorld
     Modal
   },
   methods: {

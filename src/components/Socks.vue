@@ -3,7 +3,6 @@
     <p class="cart">Cart {{ cartValue }}</p>
     <div class="gridbox">
       <div>
-        <!-- <img :src="variants[selectedIndex].variantImage" class="sockImage" /> -->
         <img :src="image" class="sockImage" />
       </div>
       <div class="grid-2">
@@ -38,7 +37,6 @@ export default {
       Name: "Socks",
       cartValue: 0,
       brand: "branded",
-      //image: "../assets/Images/greenSocks.png",
       selectedIndex: 0,
       reviews: [],
       cart: 0,
@@ -72,8 +70,6 @@ export default {
         this.cartValue -= 1;
       }
     }
-    // addReview(productreview) {
-    //   this.reviews.push(productreview);
   },
 
   computed: {

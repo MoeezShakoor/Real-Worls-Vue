@@ -32,9 +32,9 @@
 export default {
   data() {
     return {
-			name:null,
-			review:null,
-      reviews: []
+		name:null,
+		review:null,
+      	reviews: []
     };
   },
 
@@ -45,8 +45,8 @@ export default {
 				review: this.review
 			}
 			this.reviews.push(productreview);
-			// this.name=null
-			// this.review=null
+			this.name=null
+			this.review=null
 		}
   }
 };

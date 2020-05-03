@@ -31,10 +31,7 @@ export default {
 <style scoped>
 .modal{
 	visibility: hidden;
-	/* position: absolute; */
 	background-color: rgba(139, 139, 139, 0.6);
-	/* height:100%;
-	width: 100%; */
 	padding-top: 19%;
 	padding-right:  34%;
 	padding-bottom:  50%;
@@ -48,10 +45,6 @@ export default {
 	border: 1px solid green;
 	font-size: 17px;
 	border-bottom:  none;
-	/* margin-top: auto;
-	margin-right:auto ;
-	margin-bottom:auto ;
-	margin-left:36%; */
 }
 .modalBoxCross i{
 	float: right;
@@ -69,10 +62,6 @@ export default {
 	border: 1px solid green;
 	font-size: 17px;
 	border-top:  1px solid rgb(224, 221, 221);
-	/* padding-top: 15px;
-	padding-right:  auto;
-	padding-bottom: auto;
-	padding-left:  16px; */
 }
 .del-button{
 	margin-top: 25px;
