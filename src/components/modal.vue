@@ -1,12 +1,14 @@
 <template>
 	<div id="modal" class="modal">
 		<div id="modalBoxCross" class="modalBoxCross">
+			<slot name="title"></slot>
 			<i class="fas fa-times"  v-on:click="closemodal()"></i>
 		</div>
 		<div id="modalBox" class="modalBox">
-			This is a modal 
-			<br><br>
-			<input class="del-button" type="button" value="Delete" v-on:click="Del_Confirm_Yes()">
+			<slot name="description"></slot>
+			<button class="del-button" v-on:click="Del_Confirm_Yes()">
+				<slot name="action"></slot>
+			</button>
 			<input class="no-button" type="button" value="No" v-on:click="Del_Confirm_No()">     
 		</div>
 	</div>
@@ -15,7 +17,8 @@
 export default {
 	methods: {
 		Del_Confirm_Yes(){
-			this.$emit('closemodal')
+			var check="yes";
+			this.$emit('closemodal',check)
 		},
 		Del_Confirm_No(){
 			this.$emit('closemodal')
