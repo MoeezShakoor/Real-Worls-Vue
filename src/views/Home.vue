@@ -56,6 +56,6 @@ export default {
   display: inline;
 }
 .pop-up-act{
-      margin-top: 5px;
+  margin-top: 5px;
 }
 </style>
